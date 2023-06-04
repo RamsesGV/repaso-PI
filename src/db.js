@@ -26,7 +26,10 @@ PostModel(sequelize);
 //Creamos las relaciones
 const { User, Post} = sequelize.models
 // 1 a  muchos un usuario tiene  muhcos posts
-User.hasMany(Post);
+User.hasMany(Post),{
+    onDelete: 'CASCADE',
+    onUpdate: 'CASCADE'
+};
 
 //un post va a pertenecer a un usuario
 

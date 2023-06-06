@@ -91,6 +91,7 @@ const getUserByIdDB = async (id) => {
             if(filterUser.length) { 
                 return filterUser
             }
+            throw new Error('No se econtroun usuario con ese nombre')
         }else{
             return allUsers
         
